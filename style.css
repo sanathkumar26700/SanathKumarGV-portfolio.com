@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+body{
+    font-family: 'Lato', sans-serif;} 
+*{
+    margin: 0;
+}
+:root{
+    --primary-color : #92410e98;
+    --section-bg : #E5E7EB;
+    }
+/* -----------------------------------Container--------------------------------------------- */
+.container{
+    padding : 0rem 1rem;
+}
+.centered-container{
+    max-width: 600px;
+    margin: auto;
+}
+/* -----------------------------------Links--------------------------------------------- */
+.link{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: black;
+}
+.link-primary{
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+}
+.link-primary:hover{
+    background-color: white;
+    border: solid 2px var(--primary-color);
+}
+.link-secondary{
+    border-radius: 0.5rem;
+    border: solid 2px var(--primary-color);
+    background-color:whitesmoke;
+}
+.link-secondary:hover{
+    background-color:var(--primary-color);
+}
+
+/* -----------------------------------Lists--------------------------------------------- */
+.list-bulletless{
+    list-style: none;
+}
+.list-item-inline{
+    display: inline;
+    padding: 0re 0.5rem ;
+}
+/* -----------------------------------Navigation--------------------------------------------- */
+
+.navigation{
+    background-color: var(--primary-color);
+    color:whitesmoke;
+    padding: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.navigation .nav-pills{
+    text-align: right;
+    padding: 5px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+.navigation .nav-pills li a:hover,
+.navigation .nav-pills li a:active {
+
+    color: #E5E7EB;
+}
+
+.navigation .link{
+    color: rgb(0, 0, 0);
+}/*inheritance/overwriting */
+/* ----------------------------------Header--------------------------------------------- */
+.hero{
+    padding: 2rem;
+}
+.hero-text{
+    text-align: center;
+    padding: 1rem;
+    font-size: 100px;    
+}
+.hero .hero-img{
+    display: block;
+    margin: auto;
+    max-width: 350px;
+}
+/* ----------------------------------section--------------------------------------------- */
+.section{
+    padding : 2rem;        
+    }
+    .section p{
+        padding: 1rem;        
+        }
+.section h1{
+    text-align: center;
+}
+.section-bg-color{
+    background-color: var(--section-bg) ;
+}
+    .project-box {
+        background-color: #fff;
+        border-radius: 5px;
+        width: 90%;
+        margin-left: 5%;
+        box-shadow: 0 2px 2px #efefef;
+    }
+    
+    .project-box div {
+        padding: 15px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+/* ----------------------------------Footer--------------------------------------------- */
+.footer{
+    background-color: var(--primary-color);
+    padding: 2rem;
+    text-align: center;
+    border-bottom-right-radius: 1rem;
+}
+.footer h1{
+    padding-bottom: 2rem;
+}
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited, 
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+    color: #00aced;
+}
+
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+
+.ion-social-instagram:hover {
+    color: #517fa4;
+}
+
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
