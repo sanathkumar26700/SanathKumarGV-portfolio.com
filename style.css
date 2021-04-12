@@ -1,7 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
-body{
-    font-family: 'Lato', sans-serif;} 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap'); 
 *{
     margin: 0;
     padding: 0 ;
@@ -10,18 +7,19 @@ body{
 :root{
     --primary-color : #92410e98;
     --section-bg : #E5E7EB;
-    }
-    html{
-        font-size: 62.5%;
-    }
-    body{
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Lato', sans-serif;
     width:100%;
     max-width: 800px;
     margin: auto;
     font-size: 1.5rem;
     box-sizing: border-box;
-    }
-    /* -----------------------------------Links--------------------------------------------- */
+}
+/* -----------------------------------Links--------------------------------------------- */
     .link{
         text-decoration: none;
         padding: 0.5rem 1rem;
