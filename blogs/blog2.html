@@ -15,24 +15,79 @@
             <li  class="list-item-inline"><a class="link" href="/home.html">Home</a> </li>
             <li class="list-item-inline"><a class="link" href="/pages/projects.html">Projects</a> </li>
             <li class="list-item-inline"><a class="link" href="/pages/blogs.html">Blogs</a> </li> 
-            <li class="list-item-inline"><a class="link" href="#contact">Contact</a> </li> 
+            <li class="list-item-inline"><a class="link" href="https://www.linkedin.com/in/sanath-kumar-g-v-317206193">Contact</a> </li> 
         </ul>
     </nav>
-    <section  class="section">
-        <div  class="container centered-container ">
+    <section  class="blogs">
      <header class="hero">
-           <h1 class="hero-text">What is <web style="color: #92410e98;">Cascading Style Sheets</span>?</h1>
+    <h1 class="hero-text">How to create and compile a SASS file through NPM</h1>
     </header>
-    <img class="hero-img" src="/blogs/blogs-img/css-img.jpg" alt="css-img">
-   <p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
+    <br>
+    <br>
+Here is a simple step by step process of creating, compiling a SASS file and also run it locally on the live server,
+<br>
+<br>
+a) Install Node
+<br>
+<br>
+b) In the terminal, navigate to the folder in which you want to create the SASS file using dir and cd .
+<br>
+<br>
+c) To create a package.json file which contain definition of your project and where npm will write packages using npm init
+<br>
+<br>
+d) Set name and all other details
+<br>
+<br>
+Install npm SASS package through terminal,
+<br>
+<br>
+npm install node-sass --save-dev
+<br>
+<br>
 
-    CSS is among the core languages of the open web and is standardized across Web browsers according to W3C specifications. Previously, development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.
-    
-    From CSS3, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to develop and release recommendations separately per module. Instead of versioning the CSS specification, W3C now periodically takes a snapshot of the latest stable state of the CSS specification.</p>
-    </div>
+here,
+<br>
+<br>
+
+node-sass - Name of the package we have to install
+<br>
+<br>
+
+--save-dev - This updates our package and lists the package.json file as one of the dependencies, this means node-sass is a tool that we use to develop
+<br>
+<br>
+
+e) Now create a folder and a .scss file in it and all the SASS code in it.
+<br>
+<br>
+
+f) In package.json, link the css and scss file in by adding,
+<br>
+<br>
+"compile:sass" : "node-sass" "sass/input.sass" "css/style.css"
+<br>
+<br>
+to
+<br>
+<br>
+"scripts " : { }
+<br>
+<br>
+g) In terminal, npm run compile:sass this compiles sass and renders it into the outputfile as css.
+<br>
+<br>
+h) Now install live server globally, npm install live-server -g so that you can use it in any project.
+<br>
+<br>
+i) Then just run live-server in your directory to run your project live locally which will reload when you save the SCSS file.
+   </div>
 </section>
 
   <footer id="contact">
+      <h1 style="text-align: center;">
+          Let's connect to code and build projects together😍 
+    </h1>
     <div class="row">
           <ul class="list-bulletless nav-pills social-links">
                 <li><a href="https://twitter.com/sanathkumar267?s=08"><i class="ion-social-twitter"></i></a></li>
@@ -40,9 +95,6 @@
                 <li><a href="https://www.linkedin.com/in/sanath-kumar-g-v-317206193"><i class="ion-social-linkedin"></i></a></li>
             </ul>
     </div>
-    <h1 style="text-align: center;">
-        Let's connect to code and build projects together😍 
-  </h1>
         </footer>
 </body>
 </html>

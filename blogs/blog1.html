@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/vendors/css/ionicons.min.css">
     <link rel="stylesheet" href="/style.css">
-    <title>Projects</title>
+    <title>JS engine</title>
 </head>
 <body>
     <nav class="navigation ">
@@ -15,32 +15,82 @@
             <li  class="list-item-inline"><a class="link" href="/home.html">Home</a> </li>
             <li class="list-item-inline"><a class="link" href="/pages/projects.html">Projects</a> </li>
             <li class="list-item-inline"><a class="link" href="/pages/blogs.html">Blogs</a> </li> 
-            <li class="list-item-inline"><a class="link" href="#contact">Contact</a> </li> 
+            <li class="list-item-inline"><a class="link" href="https://www.linkedin.com/in/sanath-kumar-g-v-317206193">Contact</a> </li> 
         </ul>
     </nav>
-    <section  class="section">
-        <div  class="container centered-container ">
-     <header class="hero">
-           <h1 class="hero-text">What is <web style="color: #92410e98;">JavaScript</span>?</h1>
+    <section  class=" blogs">
+     <header class="hero blog-header">
+           <h1 class="hero-text" web style="color: #92410e98";>JavaScript engine</span></h1>
+           <h2>The factory of JavaScript Runtime Environment</h2>
     </header>
-    <p>JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc. This article helps you get started with JavaScript and furthers your understanding of what is possible.</p>
-    <img class="hero-img" src="/blogs/blogs-img/js.png" alt="js-img">
-    <p>JavaScript ("JS" for short) is a full-fledged dynamic programming language that can add interactivity to a website. It was invented by Brendan Eich (co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation).
+    <p>Before we start about JS engine, let’s understand about what JavaScript runtime environment is and where 
+    the JavaScript engine works to understand how it works. JavaScript can run anywhere in browsers, servers,
+    smart watches, robots, water purifiers, literally anywhere and this is possible because of JavaScript 
+    Runtime environment.</p>
 
-        JavaScript is versatile and beginner-friendly. With more experience, you'll be able to create games, animated 2D and 3D graphics, comprehensive database-driven apps, and much more!
-        
-        JavaScript itself is relatively compact, yet very flexible. Developers have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:
-        
-        Browser Application Programming Interfaces (APIs) built into web browsers, providing functionality such as dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's webcam, or generating 3D graphics and audio samples.
-        Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as Twitter or Facebook.
-        Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.
-        It's outside the scope of this article—as a light introduction to JavaScript—to present the details of how the core JavaScript language is different from the tools listed above. You can learn more in MDN's JavaScript learning area, as well as in other parts of MDN.
-        
-        The section below introduces some aspects of the core language and offers an opportunity to play with a few browser API features too.</p>
-    </div>
+    <p>This JavaScript environment does everything that is required for a piece of JavaScript code to be taken in
+ as an input, processed and give the required output. It contains the JS engine, APIs
+  (to connect to the web), Event Loop, callstack queue, microstack queue.</p>
+<img src="/blogs/blogs-img/runtime environment.png" class="img-blog" width="100%" alt="runtime-environment.png">
+
+  <p>So, coming to browsers, any given browser requires a JavaScript runtime environment to execute JavaScript 
+code and this is where the JS engine picks its role to run the code in the Run time environment which also
+ helps in the interaction with APIs, hence is the most important component of the JS Runtime environment.
+  There are tones of JS engines like Chakra used in Microsoft edge, Spidermonkey used in Mozilla and V8 
+  used in Google chrome. One can build a JS engine by themselves by following ECMAScript.</p>
+
+  <p>JS engine is just a piece of code written in assembly level language that takes in normal JavaScript 
+code and converts it into a machine level code.</p>
+
+<h2>How does it do that?</h2>
+
+<p>The code which is taken in as an input undergoes three major steps for execution,</p>
+<br>
+<h2>1. Parsing</h2><br>
+<h2>2. Compilation</h2><br>
+<h2>3. Execution</h2><br>
+
+<h1>Parsing➡</h1>
+During parsing the high-level JavaScript code is taken in as an input and is broken-down into tokens.
+
+Then these tokens are sent to a syntax parser which converts the code into an AST (Abstract Syntax Tree).
+<img src="/blogs/blogs-img/Parsing.png" class="img-blog" alt="parsing.img">
+<br>
+here is an example for an AST,
+<img src="/blogs/blogs-img/Ast.PNG" class="img-blog" width="100%" alt="AST.png">
+
+<p>Yup, this the AST of just one line of code🤡</p>
+<br>
+<h1>Compilation🏭</h1>
+Before diving into compilation let’s briefly understand what is an interpreter and compiler. Interpreter - Executes code line by line by line in the order i.e. synchronously, hence the execution is fast. Compiler - The entire code is compiled and creates an optimized version of the code which is then executed, hence it is more efficient.
+<br>
+When JS was invented it was supposed to be interpreted, but now it is both an interpreter + compiler. JavaScript can behave as both interpreted and compiled language based on the engine which decides if it should use interpreter or compiler or instead both which is known as JIT.
+<br>
+JIT (Just in Time) compilation uses both compiler and interpreter. Hence, compilation and execution go hand-in-hand. As the AST that is created in parsing is sent to interpreter which converts the high-level code into byte code and sends it for execution but while the code is interpreted line-by-line by the interpreter, it also interacts with compiler which optimizes the code and take codes from it. Hence the entire execution happens in the multiple phases. The compiler tries to optimize on the run time, hence it is known as JIT compilation. In some engines there is AOT (Ahead of Time) compilation where the compiler takes the code in the later part and compiles it and converts it to byte code and sends it to the execution phase.
+<br>
+<br>
+<h1>Execution✨</h1>
+The two main components of execution phase happen using the memory heap and the call stack.
+<br>
+<h3>Memory heap -</h3>place where things like variables, functions are stored and is in sync with the call stack and garbage collector and etc.
+<br>
+<h3>Call stack -</h3>the order of execution context in the JavaScript run time environment. Execution also has garbage collector which removes, stores and maintains memory using Mark and sweep and other algorithms.
+<br>
+This is how a basic and generic JS engine works in any browser🎈!!
+<br>
+<img src="/blogs/blogs-img/js-engine.jpeg" class="img-blog" alt="js-engine">
+
+<h1>Overview👀</h1>
+To run JavaScript code anywhere we need a JS Runtime Environment which contains the JS engine. In the JavaScript engine, the code which is taken as input undergoes three phases. Firstly, parsing in which the code is converted into tokens and with the help of syntax parser, the AST is generated which is passed to the next phase that is compilation where the JIT compilation occurs where an interpreter and compiler work together with the help of multiple optimization techniques to the code and convert it into an optimized efficient byte code and sends to the execution phase which is the last phase in which the byte code is executed with the help of memory heap and the call stack.
+<br>
+And there you go🎉 now you know how exactly JavaScript code is read, processed and executed in the JavaScript run time environment and make it do what it does!
+</div>
 </section>
 
   <footer id="contact">
+      <h1 style="text-align: center;">
+          Let's connect to code and build projects together😍 
+      </h1>
     <div class="row">
           <ul class="list-bulletless nav-pills social-links">
                 <li><a href="https://twitter.com/sanathkumar267?s=08"><i class="ion-social-twitter"></i></a></li>
@@ -48,9 +98,6 @@
                 <li><a href="https://www.linkedin.com/in/sanath-kumar-g-v-317206193"><i class="ion-social-linkedin"></i></a></li>
             </ul>
     </div>
-    <h1 style="text-align: center;">
-        Let's connect to code and build projects together😍 
-  </h1>
         </footer>
 </body>
 </html>
