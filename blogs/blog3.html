@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/vendors/css/ionicons.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>JS engine</title>
+</head>
+<body>
+    <nav class="navigation ">
+      <div class="navigation-head">< Sanath Kumar/></div>
+      <ul class="list-bulletless nav-pills">
+            <li  class="list-item-inline"><a class="link" href="/home.html">Home</a> </li>
+            <li class="list-item-inline"><a class="link" href="/pages/projects.html">Projects</a> </li>
+            <li class="list-item-inline"><a class="link" href="/pages/blogs.html">Blogs</a> </li> 
+            <li class="list-item-inline"><a class="link" href="https://www.linkedin.com/in/sanath-kumar-g-v-317206193">Contact</a> </li> 
+        </ul>
+    </nav>
+
+    <section  class=" blogs">
+
+     <header class="hero blog-header">
+           <h1 class="hero-text" web style="color: #92410e98";>Class-based Components vs Functional Components</span></h1>
+    </header>
+
+    <p> Before knowing the differences let me tell about components first so that it will lay the foundation for
+        better understanding, 
+    <br/>  
+    <br/>    A component at the browser level anything on the user interface which is mounted on
+        the screen and at the code level in a functional component is something that returns a JSX element or returns 
+        null or in the case of Class-based components, a class which extends the React.Component super class
+        and also has a render method that also returns a JSX element or returns.
+    </p>
+
+    <br/>
+
+    <p>So, the basic concept in any component is that when the state is changed by calling the setState function or through
+        useState hook the component re-renders, but the major difference is the mutability of components – A class-based 
+        component would be mutated but a functional component is not mutated.
+    </p>
+
+    <br/>
+
+    <p>This means whatever the object that has been created for the class component that internally stores the initial value of
+    the state is mutating or changing that variable(state) directly. So, the previous value of that particular 
+    variable is lost forever unless we have some kind of extra backup function to store the value the variable beforehand.
+    </p>
+
+    <br/>
+
+    <p>     But in the case of functional component, they are called again with updated state values that means when the component is
+        mounted on the screen and when the state is updated through the useState Hook’s function, it tells React to update the 
+        functional component to replace the useState with the new variable so what happens is when the component function is 
+        called again useState(x) is replaced with useState(y), So therefore technically we are not mutating the state variable instead 
+        React is just re initializing the variable with a new value when the function is called and hence re-renders accordingly.
+    </p>
+
+    <br/>
+    <img src="/blogs/blogs-img/Re-renders.jpg" alt="re-render flow chart" class="img-blog" width="100%">
+
+    <br/>
+
+    <p>That's it! that's the major difference between a class-based component and functional component!</p>
+
+</section>
+
+  <footer id="contact">
+      <h1 style="text-align: center;">
+          Let's connect to code and build projects together😍 
+      </h1>
+    <div class="row">
+          <ul class="list-bulletless nav-pills social-links">
+                <li><a href="https://twitter.com/sanathkumar267?s=08"><i class="ion-social-twitter"></i></a></li>
+                <li><a href="https://github.com/sanathkumar26700"><i class="ion-social-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/sanath-kumar-g-v-317206193"><i class="ion-social-linkedin"></i></a></li>
+            </ul>
+    </div>
+        </footer>
+</body>
+</html>
